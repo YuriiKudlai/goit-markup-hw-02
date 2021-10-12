@@ -1,6 +1,7 @@
 :root {
   --primary-text-color: #212121;
   --secondary-text-color: #757575;
+  --third-text-color: rgba(255, 255, 255, 0.6);
   --accent-color: #2196f3;
   --primary-white-color: #ffffff;
   --logo-color-dark: #000000;
@@ -9,6 +10,7 @@
 body {
   font-family: Roboto, Raleway, sans-serif;
   color: var(--primary-text-color);
+  background-color: var(--primary-white-color);
 }
 
 .link {
@@ -19,18 +21,18 @@ body {
   list-style: none;
 }
 
-.logo-web {
-  color: var(--accent-color);
+.logo-dark {
+  color: var(--logo-color-dark);
 }
 
-.logo-web-light {
+.logo-light {
   color: var(--primary-white-color);
 }
 /*---------------logo---------------*/
 
 .logo {
   font-family: Raleway, sans-serif;
-  color: var(--logo-color-dark);
+  color: var(--accent-color);
   font-weight: bold;
   font-size: 26px;
   line-height: 1.19;
@@ -38,6 +40,7 @@ body {
 }
 
 /*---------------site-nav---------------*/
+
 .site-nav .link {
   color: var(--primary-text-color);
   font-weight: 500;
@@ -47,11 +50,12 @@ body {
 }
 
 .site-nav .link:hover,
-.site-nav .link:focus {
-  color: var(--accent-color);
-}
-
-.site-nav .link.current {
+.site-nav .link:focus,
+.site-nav .link.current,
+.header-contacts .link:hover,
+.header-contacts .link:focus,
+.footer-contacts .link:hover,
+.footer-contacts .link:focus {
   color: var(--accent-color);
 }
 
@@ -63,11 +67,6 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-}
-
-.header-contacts .link:hover,
-.header-contacts .link:focus {
-  color: var(--accent-color);
 }
 
 /*---------------hero---------------*/
@@ -87,9 +86,11 @@ body {
 }
 
 .hero-btn {
+  font-family: Roboto, sans-serif;
   color: var(--primary-white-color);
   background-color: var(--accent-color);
   border: none;
+  cursor: pointer;
   font-weight: bold;
   font-size: 16px;
   line-height: 1.87;
@@ -97,6 +98,7 @@ body {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
+  border-radius: 4px;
 }
 
 /*---------------features---------------*/
@@ -115,10 +117,6 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 3%;
-}
-
-.features-title-head {
-  visibility: hidden;
 }
 
 /*---------------our-work---------------*/
@@ -172,20 +170,16 @@ body {
 }
 
 .footer-contacts .link {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--third-text-color);
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
 
-.footer-contacts .link:hover,
-.footer-contacts .link:focus {
-  color: var(--accent-color);
-}
-
 /*---------------portfolio-btn---------------*/
 
 .btn {
+  font-family: Roboto, sans-serif;
   background-color: #f5f4fa;
   color: var(--primary-text-color);
   cursor: pointer;
@@ -195,10 +189,12 @@ body {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
+  border-radius: 4px;
 }
 
 .btn:hover,
-.btn:focus {
+.btn:focus,
+.list-btn .btn.active-btn {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
 }
